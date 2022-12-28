@@ -1,0 +1,20 @@
+services:
+  - type: web
+    env: node
+    region: singapore
+    plan: free
+    branch: main
+    startCommand: node .output/server/index.mjs
+    buildCommand: npm install && npm run build
+    healthCheckPath: /api/healthz
+    envVars:
+    - key: NITRO_PRESET
+      value: render-com
+    - key: NUXT_API_URL
+      sync: false
+    - key: NUXT_REDIRECT_URL
+      sync: false
+    - key: NUXT_CLIENT_ID
+      sync: false
+    - key: NUXT_CLIENT_SECRET
+      sync: false
