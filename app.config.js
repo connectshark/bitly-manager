@@ -1,3 +1,4 @@
 export default defineAppConfig({
-  title: 'Bitly Manager'
+  title: 'Bitlyer',
+  API_URL: 'https://api-ssl.bitly.com'
 })

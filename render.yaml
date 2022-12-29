@@ -10,8 +10,6 @@ services:
     envVars:
     - key: NITRO_PRESET
       value: render-com
-    - key: NUXT_API_URL
-      sync: false
     - key: NUXT_REDIRECT_URL
       sync: false
     - key: NUXT_CLIENT_ID

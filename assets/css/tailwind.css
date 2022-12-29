@@ -4,7 +4,10 @@
 
 @layer base {
   :root {
+    --color-blue: 0 111 216;
     --color-deep-green: 0 142 155;
-    --color-primary: var(--color-deep-green);
+    --color-pink: 255 73 166;
+    --color-primary: var(--color-blue);
+    --color-secondary: var(--color-pink);
   }
 }

@@ -1,7 +1,13 @@
 {
-  "name": "bitly-manager",
+  "name": "Bitlyer",
   "version": "1.0.0",
-  "private": true,
+  "repository": {
+    "url": "https://github.com/connectshark/bitly-manager"
+  },
+  "author": {
+    "name": "nosegates",
+    "url": "https://github.com/connectshark"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

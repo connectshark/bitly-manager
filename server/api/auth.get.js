@@ -5,7 +5,6 @@ const CLIENT_SECRET = import.meta.env.NUXT_CLIENT_SECRET
 
 export default defineEventHandler(async (event) => {
   const { code } = getQuery(event)
-  console.log(code)
   const form = new URLSearchParams({
     client_id: CLIENT_ID,
     code: code,

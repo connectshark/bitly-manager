@@ -13,7 +13,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       CLIENT_ID: process.env.NUXT_CLIENT_ID,
-      REDIRECT_URL: process.env.NUXT_REDIRECT_URL
+      REDIRECT_URL: process.env.NUXT_REDIRECT_URL,
+      API_URL: process.env.NUXT_API_URL
     }
   },
   modules: [

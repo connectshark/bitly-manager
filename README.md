@@ -1,42 +1,15 @@
-# Nuxt 3 Minimal Starter
+# bitly-manager
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Bitlyer
 
-## Setup
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
-Make sure to install the dependencies:
+## Environment Variables
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
+Add a `.env` file at root and fill some environment variables
 ```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
+.env
+NUXT_EMAIL_SERVICE_AUTH_USER=<NUXT_EMAIL_SERVICE_AUTH_USER>
+NUXT_EMAIL_SERVICE_AUTH_PW=<NUXT_EMAIL_SERVICE_AUTH_PW>
+NUXT_EMAIL_DEFAULT_FROM=<NUXT_EMAIL_DEFAULT_FROM>
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
