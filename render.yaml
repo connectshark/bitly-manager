@@ -1,5 +1,6 @@
 services:
   - type: web
+    name: Bitlyer
     env: node
     region: singapore
     plan: free
