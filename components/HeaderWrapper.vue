@@ -7,7 +7,8 @@
       <nav class="ml-auto text-md">
         <ul>
           <li>
-            <NuxtLink class=" text-white hover:underline" to="/dashboard">後台</NuxtLink>
+            <button @click="signout" v-if="token" class="text-white hover:underline" type="button">登出</button>
+            <NuxtLink v-else class="text-white hover:underline" to="/dashboard">後台</NuxtLink>
           </li>
         </ul>
       </nav>
@@ -17,4 +18,10 @@
 
 <script setup>
 const config = useAppConfig()
+const token = useAccessToken()
+
+const signout = () => {
+  token.value = ''
+  navigateTo('/')
+}
 </script>

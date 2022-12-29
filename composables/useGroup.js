@@ -1,6 +1,7 @@
 export default function (code) {
   const loading = ref(false)
-  const groupId = ref([])
+  const groupId = ref('')
+  const links = ref([])
   const config = useAppConfig()
   const token = useAccessToken()
 
@@ -12,8 +13,7 @@ export default function (code) {
       }
     })
     const res = await fetch_response.json()
-    groupId.value = res.groups.map(group => group.guid)
-    loading.value = false
+    groupId.value = res.groups[0].guid
   }
 
   const getGroupLink = async (GROUP_ID) => {
@@ -23,12 +23,18 @@ export default function (code) {
       }
     })
     const res = await fetch_response.json()
+    links.value = res.links
+    loading.value = false
   }
 
-  onMounted(getGroupId)
+  onMounted(async () => {
+    await getGroupId()
+    await getGroupLink(groupId.value)
+  })
 
   return {
     loading,
-    groupId
+    groupId,
+    links
   }
 }
