@@ -20,23 +20,20 @@
 
 <script setup>
 const route = useRoute()
-const code = route.query.code
-
-const {
-  loading,
-  err
-} = useAuth(code)
-
+const err = ref(false)
+const token = route.query.token
 
 const accessToken = useAccessToken()
-watch(accessToken, value => {
-  if (value !== '' || value !== undefined) {
-    setTimeout(() => {
-      navigateTo({
-        path: '/dashboard',
-        replace: true
-      })
-    }, 1000)
-  }
-})
+
+if (token === undefined || token === '') {
+  err.value = true
+} else {
+  accessToken.value = token
+  setTimeout(() => {
+    navigateTo({
+      path: '/dashboard',
+      replace: true
+    })
+  }, 1000)
+}
 </script>

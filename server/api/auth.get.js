@@ -5,6 +5,7 @@ const CLIENT_SECRET = import.meta.env.NUXT_CLIENT_SECRET
 
 export default defineEventHandler(async (event) => {
   const { code } = getQuery(event)
+  
   const form = new URLSearchParams({
     client_id: CLIENT_ID,
     code: code,
@@ -21,5 +22,5 @@ export default defineEventHandler(async (event) => {
     body: form
   })
   const res = await fetch_response.json()
-  return res
+  return sendRedirect(event, '/callback?token=' + res.access_token)
 })
