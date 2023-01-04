@@ -4,10 +4,10 @@
     <p class=" text-sm"><i class='bx bx-calendar' ></i>{{ format }}</p>
     <div class="flex items-center">
       <p class=" text-xl">{{ props.link }}</p>
-      <button class="bg-stone-200 p-1 hover:text-primary/80" @click="copy()" type="button">
+      <MainButton @click="copy()">
         <i v-if="copied" class='bx bxs-copy-alt bx-sm align-middle text-primary'></i>
         <i v-else class='bx bx-copy-alt bx-sm align-middle'></i>
-      </button>
+      </MainButton>
     </div>
     <div class="py-2">
       <h4 class="text-xs break-all bg-stone-200 inline-block p-1 rounded">{{ props.long_url }}</h4>

@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
     head: {
@@ -11,11 +10,11 @@ export default defineNuxtConfig({
     }
   },
   runtimeConfig: {
-    CLIENT_SECRET: process.env.NUXT_CLIENT_SECRET,
+    CLIENT_SECRET: process.env.NUXT_BITLY_CLIENT_SECRET,
     BASE_URL: process.env.NUXT_API_URL,
     public: {
-      CLIENT_ID: process.env.NUXT_CLIENT_ID,
-      REDIRECT_URL: process.env.NUXT_REDIRECT_URL,
+      CLIENT_ID: process.env.NUXT_BITLY_CLIENT_ID,
+      REDIRECT_URL: process.env.NUXT_BITLY_REDIRECT_URL,
       API_URL: process.env.NUXT_API_URL,
       IS_DEV: process.env.NODE_ENV
     }

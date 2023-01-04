@@ -43,7 +43,9 @@
           :id="link.id"
         >
           <div class="py-2">
-            <button class=" bg-stone-200 p-1" @click="deleteLink(link.id)" type="button">刪除</button>
+            <MainButton @click="deleteLink(link.id)">
+              <span>刪除</span>
+            </MainButton>
           </div>
         </LinkDetail>
       </ul>

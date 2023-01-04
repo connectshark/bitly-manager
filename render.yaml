@@ -11,9 +11,11 @@ services:
     envVars:
     - key: NITRO_PRESET
       value: render-com
-    - key: NUXT_REDIRECT_URL
+    - key: NUXT_BITLY_REDIRECT_URL
       sync: false
-    - key: NUXT_CLIENT_ID
+    - key: NUXT_BITLY_CLIENT_ID
       sync: false
-    - key: NUXT_CLIENT_SECRET
+    - key: NUXT_BITLY_CLIENT_SECRET
       sync: false
+    - key: NUXT_API_URL
+      value: https://api-ssl.bitly.com
