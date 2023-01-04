@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="login">
-    <NuxtLink class=" bg-white rounded-lg p-3 block mb-20" to="/">
+    <NuxtLink class=" bg-white rounded-lg p-3 block mb-10" to="/">
       <i class='bx bx-chevron-left bx-sm inline-block align-middle'></i>
       <span class=" align-middle inline-block">回首頁</span>
     </NuxtLink>

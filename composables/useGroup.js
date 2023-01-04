@@ -16,25 +16,26 @@ export default function (code) {
     groupId.value = res.groups[0].guid
   }
 
-  const getGroupLink = async (GROUP_ID) => {
-    const fetch_response = await fetch(config.API_URL + `/v4/groups/${GROUP_ID}/bitlinks`, {
+  const getGroupLink = async () => {
+    const fetch_response = await fetch(config.API_URL + `/v4/groups/${groupId.value}/bitlinks`, {
       headers: {
         Authorization: `Bearer ` + token.value
       }
     })
     const res = await fetch_response.json()
-    links.value = res.links
+    links.value = res.links.filter(link => !link.is_deleted)
     loading.value = false
   }
 
   onMounted(async () => {
     await getGroupId()
-    await getGroupLink(groupId.value)
+    await getGroupLink()
   })
 
   return {
     loading,
     groupId,
-    links
+    links,
+    reload: getGroupLink
   }
 }

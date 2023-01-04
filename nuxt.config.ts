@@ -11,10 +11,13 @@ export default defineNuxtConfig({
     }
   },
   runtimeConfig: {
+    CLIENT_SECRET: process.env.NUXT_CLIENT_SECRET,
+    BASE_URL: process.env.NUXT_API_URL,
     public: {
       CLIENT_ID: process.env.NUXT_CLIENT_ID,
       REDIRECT_URL: process.env.NUXT_REDIRECT_URL,
-      API_URL: process.env.NUXT_API_URL
+      API_URL: process.env.NUXT_API_URL,
+      IS_DEV: process.env.NODE_ENV
     }
   },
   modules: [

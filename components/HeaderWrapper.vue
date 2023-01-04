@@ -6,9 +6,11 @@
       </h1>
       <nav class="ml-auto text-md">
         <ul>
-          <li>
-            <button @click="signout" v-if="token" class="text-white hover:underline" type="button">登出</button>
-            <NuxtLink v-else class="text-white hover:underline" to="/dashboard">後台</NuxtLink>
+          <li v-if="token && $route.fullPath === '/dashboard'">
+            <button @click="signout" class="text-white hover:underline" type="button">登出</button>
+          </li>
+          <li v-else>
+            <NuxtLink class="text-white hover:underline" to="/dashboard">後台</NuxtLink>
           </li>
         </ul>
       </nav>
