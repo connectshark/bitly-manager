@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     public: {
       CLIENT_ID: process.env.NUXT_BITLY_CLIENT_ID,
       REDIRECT_URL: process.env.NUXT_BITLY_REDIRECT_URL,
-      API_URL: process.env.NUXT_API_URL,
+      API_URL: 'https://api-ssl.bitly.com',
       IS_DEV: process.env.NODE_ENV
     }
   },

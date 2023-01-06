@@ -27,10 +27,16 @@
       </p>
     </form>
     <section class="w-11/12 mx-auto max-w-7xl bg-white">
-      <h2 class="p-4  border-b border-stone-200">
-        <span class="text-2xl font-bold">所有連結</span>
-        <span class="ml-4 text-stone-600">{{ groupId }}</span>
-      </h2>
+      <div class="p-4  border-b border-stone-200">
+        <h2>
+          <span class="text-2xl font-bold">所有連結</span>
+          <span class="ml-4 text-stone-600">{{ groupId }}</span>
+        </h2>
+        <MainButton @click="reload()" :disabled="loading">
+          <i v-if="loading" class='bx bx-dots-horizontal-rounded bx-sm'></i>
+          <i v-else class='bx bx-revision bx-sm'></i>
+        </MainButton>
+      </div>
       <ul>
         <li v-if="loading" class="p-3 text-center"><i class='bx bx-loader bx-spin bx-md'></i></li>
         <LinkDetail

@@ -14,9 +14,11 @@ export default function (code) {
     })
     const res = await fetch_response.json()
     groupId.value = res.groups[0].guid
+    loading.value = false
   }
 
   const getGroupLink = async () => {
+    loading.value = true
     const fetch_response = await fetch(config.API_URL + `/v4/groups/${groupId.value}/bitlinks`, {
       headers: {
         Authorization: `Bearer ` + token.value

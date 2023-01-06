@@ -6,10 +6,9 @@ export default defineEventHandler(async (event) => {
     client_id: runtimeConfig.public.CLIENT_ID,
     code: code,
     redirect_uri: runtimeConfig.public.REDIRECT_URL,
-    grant_type: 'authorization_code',
     client_secret: runtimeConfig.CLIENT_SECRET
   })
-  const fetch_response = await fetch(runtimeConfig.BASE_URL + '/oauth/access_token', {
+  const fetch_response = await fetch(runtimeConfig.public.API_URL + '/oauth/access_token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',

@@ -2,7 +2,7 @@
   <footer class="text-center border-t border-stone-300">
     <div class="w-11/12 mx-auto max-w-7xl py-8 flex flex-col gap-6 lg:flex-row justify-between">
       <div>
-        <p><i class='bx bx-copyright'></i>2022 {{ config.title }} MIT License</p>
+        <p><i class='bx bx-copyright'></i>2022-2023 {{ config.title }} MIT License</p>
       </div>
       <ul>
         <li>
