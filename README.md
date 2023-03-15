@@ -7,6 +7,8 @@
 
 `Nuxt`專案開發
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
 ## 目錄
 - [專案說明](#專案說明)
 - [環境變數](#環境變數)
@@ -22,8 +24,14 @@
 串接[Bitly](https://bitly.com/)官方API，提供使用者瀏覽&操作Bitly上的短連結
 
 ### 登入
+![](/readme/login.png)
+官方提供多種登入方式可選擇，本專案提供`OAuth 2.0`的方式作登入
+授權後可登入
 
-官方提供多種登入方式可選擇，本專案提供`OAuth 2.0`的方式作登入，
+### 操作
+
+可查看已轉換過的連結
+![](/readme/link.png)
 
 ## 環境變數
 
@@ -35,6 +43,8 @@ NUXT_BITLY_REDIRECT_URL=<NUXT_BITLY_REDIRECT_URL>
 NUXT_BITLY_CLIENT_ID=<NUXT_BITLY_CLIENT_ID>
 NUXT_BITLY_CLIENT_SECRET=<NUXT_BITLY_CLIENT_SECRET>
 ```
+
+[參考文章](https://medium.com/nosegates/745a9914c935)
 
 ## 一鍵部署
 直接在[Render](https://render.com/)上觀看
