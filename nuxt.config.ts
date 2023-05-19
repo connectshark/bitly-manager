@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   app: {
+    rootId: 'app',
     head: {
       title: 'Bitly Manager',
       link: [
@@ -23,6 +24,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt'
   ],
+  nitro: {
+    prerender: {
+      routes: ['/'],
+      crawlLinks: true
+    }
+  },
   tailwindcss: {
     viewer: false
   }
